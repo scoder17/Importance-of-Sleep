@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Important Sleep</string>
+    <string name="header_text">Sleep is important</string>
+    <string name="definition_text">Sleep is a natural, recurring state of mind and body characterized by altered consciousness, reduced sensory activity, and inactivity of voluntary muscles. It is a crucial aspect of human life and plays a vital role in maintaining overall health and well-being.</string>
+    <string name="content_text">There are different stages of sleep, broadly categorized into two main types: REM (rapid eye movement) sleep and non-REM sleep. Non-REM sleep is further divided into three stages (N1, N2, and N3), with N3 being the deepest stage of sleep.\n \nGetting an adequate amount of quality sleep is essential for overall health, cognitive function, mood regulation, and immune system function. Sleep deprivation or disruptions in sleep patterns can have negative effects on physical and mental well-being, leading to issues such as fatigue, impaired concentration, memory problems, and an increased risk of various health conditions.\n</string>
+</resources>
