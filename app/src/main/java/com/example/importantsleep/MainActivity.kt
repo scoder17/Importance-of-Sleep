@@ -8,7 +8,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -49,33 +54,40 @@ fun Sleep(modifier: Modifier = Modifier) {
         Image(
             painter = imgHeader,
             contentDescription = null,
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.FillBounds,
             modifier = Modifier
                 .fillMaxWidth()
-//                .height(210.dp)
-//                .padding(5.dp)
+                .height(150.dp)
         )
-        Text(
-            text = stringResource(R.string.header_text),
-            fontSize = 24.sp,
-            modifier = Modifier
-                .padding(16.dp)
-        )
-        Text(
-            text = stringResource(R.string.definition_text),
-            textAlign = TextAlign.Justify,
-            modifier = Modifier
-                .padding(
-                    start = 16.dp,
-                    end = 16.dp
-                )
-        )
-        Text(
-            text = stringResource(R.string.content_text),
-            textAlign = TextAlign.Justify,
-            modifier = Modifier
-                .padding(16.dp)
-        )
+        Column(
+            verticalArrangement = Arrangement.Center,
+            modifier = modifier
+                .statusBarsPadding()
+                .verticalScroll(rememberScrollState())
+                .safeDrawingPadding()
+        ) {
+            Text(
+                text = stringResource(R.string.header_text),
+                fontSize = 24.sp,
+                modifier = Modifier
+                    .padding(16.dp)
+            )
+            Text(
+                text = stringResource(R.string.definition_text),
+                textAlign = TextAlign.Justify,
+                modifier = Modifier
+                    .padding(
+                        start = 16.dp,
+                        end = 16.dp
+                    )
+            )
+            Text(
+                text = stringResource(R.string.content_text),
+                textAlign = TextAlign.Justify,
+                modifier = Modifier
+                    .padding(16.dp)
+            )
+        }
     }
 }
 
